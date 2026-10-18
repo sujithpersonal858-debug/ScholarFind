@@ -1,0 +1,388 @@
+{
+  "users": [
+    {
+      "_id": "6ad235d05ec42cc25899a5ff",
+      "name": "ScholarFind Administrator",
+      "email": "admin@scholarfind.com",
+      "password": "$2a$10$D8gnM/EHM1MYmOndTxPkKuOff4Ksfa51wVQFCBaiOodAXlt2wXLzi",
+      "role": "admin",
+      "createdAt": "2026-10-16T14:33:52.647Z",
+      "updatedAt": "2026-10-17T04:00:00.574Z"
+    },
+    {
+      "_id": "6ad235d05ec42cc25899a600",
+      "name": "Aarav Sharma",
+      "email": "student@scholarfind.com",
+      "password": "$2a$10$opYzZ0D3WYVp7J9TZvAhSOdmaBEDz1xXGjGWCWbiRDNL0JgEn89YW",
+      "role": "student",
+      "createdAt": "2026-10-16T14:33:52.826Z",
+      "updatedAt": "2026-10-16T14:33:52.826Z"
+    },
+    {
+      "_id": "6ad24b445ec42cc25899a60b",
+      "name": "Mahesh kumar",
+      "email": "mahesh123@gmail.com",
+      "password": "$2a$10$Z5ygeW77ph7KWbAyekB76eXwbfAwPwMjQGSNzLMuD6dqBPDgdComO",
+      "role": "student",
+      "createdAt": "2026-10-16T16:05:24.565Z",
+      "updatedAt": "2026-10-16T16:05:24.565Z"
+    }
+  ],
+  "profiles": [
+    {
+      "_id": "6ad235d05ec42cc25899a601",
+      "userId": "6ad235d05ec42cc25899a600",
+      "fullName": "Aarav Sharma",
+      "state": "Maharashtra",
+      "course": "B.Tech / B.E.",
+      "qualificationLevel": "Undergraduate",
+      "currentYear": "2nd Year",
+      "institutionType": "Government",
+      "marksPercentage": 84,
+      "annualIncome": 350000,
+      "category": "General",
+      "gender": "Male",
+      "hasDisability": false,
+      "disabilityPercentage": 0,
+      "isFirstGenerationLearner": false,
+      "createdAt": "2026-10-16T14:33:52.830Z",
+      "updatedAt": "2026-10-16T14:33:52.830Z"
+    },
+    {
+      "_id": "6ad24b445ec42cc25899a60c",
+      "userId": "6ad24b445ec42cc25899a60b",
+      "fullName": "Mahesh kumar",
+      "state": "Andhra Pradesh",
+      "course": "b tech",
+      "qualificationLevel": "Undergraduate",
+      "currentYear": "2nd Year",
+      "institutionType": "Central University / Institute",
+      "marksPercentage": 78,
+      "annualIncome": 200000,
+      "category": "SC",
+      "gender": "Male",
+      "hasDisability": false,
+      "disabilityPercentage": 0,
+      "isFirstGenerationLearner": true,
+      "createdAt": "2026-10-16T16:05:24.570Z",
+      "updatedAt": "2026-10-16T17:00:41.458Z"
+    }
+  ],
+  "scholarships": [
+    {
+      "_id": "6ad235d05ec42cc25899a602",
+      "name": "Central Sector Scheme of Scholarship for College and University Students (CSSS)",
+      "provider": "Department of Higher Education, Ministry of Education, Government of India",
+      "scholarshipType": "Government (Central)",
+      "description": "Provides financial assistance to meritorious students from low-income families to meet part of their day-to-day expenses while pursuing higher studies in college and university.",
+      "eligibleCourses": [
+        "All",
+        "B.Tech / B.E.",
+        "B.Sc",
+        "B.Com",
+        "B.A.",
+        "MBBS"
+      ],
+      "qualificationLevels": [
+        "Undergraduate",
+        "Postgraduate"
+      ],
+      "eligibleStates": [
+        "All"
+      ],
+      "minMarksPercentage": 80,
+      "maxAnnualIncome": 450000,
+      "applicableCategories": [
+        "All"
+      ],
+      "eligibleGenders": [
+        "All"
+      ],
+      "requiresDisability": false,
+      "minDisabilityPercentage": 0,
+      "benefits": "₹12,000 per annum for the first 3 years of undergraduate study; ₹20,000 per annum for postgraduate study.",
+      "amount": 12000,
+      "requiredDocuments": [
+        "Class 12th Board Marksheet",
+        "Income Certificate issued by competent revenue authority",
+        "Aadhaar Card / Proof of Identity",
+        "Bank Account Passbook seeded with Aadhaar",
+        "College Admission Bonafide Certificate"
+      ],
+      "openingDate": "2026-07-01T00:00:00.000Z",
+      "applicationDeadline": "2026-11-30T00:00:00.000Z",
+      "officialNotificationUrl": "https://www.education.gov.in/sites/upload_files/mhrd/files/Scheme_College_University_Students.pdf",
+      "officialApplicationUrl": "https://scholarships.gov.in",
+      "status": "active",
+      "lastVerifiedDate": "2026-10-16T14:33:46.285Z",
+      "verifiedByAdmin": true,
+      "createdAt": "2026-10-16T14:33:52.837Z",
+      "updatedAt": "2026-10-16T14:33:52.837Z"
+    },
+    {
+      "_id": "6ad235d05ec42cc25899a603",
+      "name": "AICTE Pragati Scholarship Scheme for Girl Students",
+      "provider": "All India Council for Technical Education (AICTE), Ministry of Education",
+      "scholarshipType": "Government (Central)",
+      "description": "Empowers young women by providing financial support to pursue technical education in AICTE-approved degree or diploma institutions across India.",
+      "eligibleCourses": [
+        "B.Tech / B.E.",
+        "Diploma in Engineering",
+        "B.Pharm",
+        "B.Arch"
+      ],
+      "qualificationLevels": [
+        "Undergraduate",
+        "Diploma"
+      ],
+      "eligibleStates": [
+        "All"
+      ],
+      "minMarksPercentage": 60,
+      "maxAnnualIncome": 800000,
+      "applicableCategories": [
+        "All"
+      ],
+      "eligibleGenders": [
+        "Female"
+      ],
+      "requiresDisability": false,
+      "minDisabilityPercentage": 0,
+      "benefits": "₹50,000 per annum for every year of study towards college tuition fees, computer purchase, books and stationery.",
+      "amount": 50000,
+      "requiredDocuments": [
+        "Class 10th and 12th Marksheets",
+        "AICTE Approved College Admission Letter",
+        "Family Income Certificate (< ₹8 Lakh/year)",
+        "Bank Passbook in Student’s Name",
+        "Aadhaar Card"
+      ],
+      "openingDate": "2026-08-01T00:00:00.000Z",
+      "applicationDeadline": "2026-12-15T00:00:00.000Z",
+      "officialNotificationUrl": "https://www.aicte-india.org/schemes/students-development-schemes/Pragati",
+      "officialApplicationUrl": "https://scholarships.gov.in",
+      "status": "active",
+      "lastVerifiedDate": "2026-10-16T14:33:46.285Z",
+      "verifiedByAdmin": true,
+      "createdAt": "2026-10-16T14:33:52.844Z",
+      "updatedAt": "2026-10-16T14:33:52.844Z"
+    },
+    {
+      "_id": "6ad235d05ec42cc25899a604",
+      "name": "Post-Matric Scholarship for Students Belonging to SC/ST Communities",
+      "provider": "Ministry of Social Justice & Empowerment / Ministry of Tribal Affairs",
+      "scholarshipType": "Government (Central)",
+      "description": "Centrally sponsored scheme to reduce dropout rates and support Scheduled Caste (SC) and Scheduled Tribe (ST) students studying at post-matriculation or post-secondary stages.",
+      "eligibleCourses": [
+        "All"
+      ],
+      "qualificationLevels": [
+        "Higher Secondary",
+        "Diploma",
+        "Undergraduate",
+        "Postgraduate",
+        "Doctoral"
+      ],
+      "eligibleStates": [
+        "All"
+      ],
+      "minMarksPercentage": 50,
+      "maxAnnualIncome": 250000,
+      "applicableCategories": [
+        "SC",
+        "ST"
+      ],
+      "eligibleGenders": [
+        "All"
+      ],
+      "requiresDisability": false,
+      "minDisabilityPercentage": 0,
+      "benefits": "Complete tuition and compulsory non-refundable fees reimbursement plus monthly maintenance allowance.",
+      "amount": 15000,
+      "requiredDocuments": [
+        "Caste Certificate issued by authorized revenue officer",
+        "Annual Income Certificate (< ₹2.5 Lakh)",
+        "Previous Examination Marksheet",
+        "College Fee Receipt",
+        "Aadhaar Card"
+      ],
+      "openingDate": "2026-06-15T00:00:00.000Z",
+      "applicationDeadline": "2026-12-31T00:00:00.000Z",
+      "officialNotificationUrl": "https://socialjustice.gov.in/schemes/post-matric-scholarship-for-sc-students",
+      "officialApplicationUrl": "https://scholarships.gov.in",
+      "status": "active",
+      "lastVerifiedDate": "2026-10-16T14:33:46.285Z",
+      "verifiedByAdmin": true,
+      "createdAt": "2026-10-16T14:33:52.848Z",
+      "updatedAt": "2026-10-16T14:33:52.848Z"
+    },
+    {
+      "_id": "6ad235d05ec42cc25899a605",
+      "name": "Prime Minister’s Scholarship Scheme (PMSS) for CAPFs & Assam Rifles",
+      "provider": "Welfare & Rehabilitation Board (WARB), Ministry of Home Affairs",
+      "scholarshipType": "Government (Central)",
+      "description": "Encourages higher technical and professional education for dependent wards and widows of Central Armed Police Forces (CRPF, BSF, CISF, ITBP, SSB) & Assam Rifles.",
+      "eligibleCourses": [
+        "B.Tech / B.E.",
+        "MBBS",
+        "BDS",
+        "BCA",
+        "BBA",
+        "B.Pharm"
+      ],
+      "qualificationLevels": [
+        "Undergraduate"
+      ],
+      "eligibleStates": [
+        "All"
+      ],
+      "minMarksPercentage": 60,
+      "maxAnnualIncome": 0,
+      "applicableCategories": [
+        "All"
+      ],
+      "eligibleGenders": [
+        "All"
+      ],
+      "requiresDisability": false,
+      "minDisabilityPercentage": 0,
+      "benefits": "₹3,000 per month for female students (₹36,000/year) and ₹2,500 per month for male students (₹30,000/year).",
+      "amount": 36000,
+      "requiredDocuments": [
+        "Service Certificate / PPO / Discharge Book of parent",
+        "Class 12th / Diploma Marksheet (min 60%)",
+        "Bonafide Certificate from College Head",
+        "Bank Account Details",
+        "Aadhaar Card"
+      ],
+      "openingDate": "2026-07-15T00:00:00.000Z",
+      "applicationDeadline": "2026-11-15T00:00:00.000Z",
+      "officialNotificationUrl": "https://warb-mha.gov.in/schemes.html",
+      "officialApplicationUrl": "https://scholarships.gov.in",
+      "status": "active",
+      "lastVerifiedDate": "2026-10-16T14:33:46.285Z",
+      "verifiedByAdmin": true,
+      "createdAt": "2026-10-16T14:33:52.852Z",
+      "updatedAt": "2026-10-16T14:33:52.852Z"
+    },
+    {
+      "_id": "6ad235d05ec42cc25899a606",
+      "name": "Kotak Kanya Scholarship for Professional Higher Education",
+      "provider": "Kotak Education Foundation (CSR Initiative)",
+      "scholarshipType": "Corporate / Private",
+      "description": "Provides substantial financial aid and academic mentorship to meritorious girl students from economically disadvantaged families to pursue professional undergraduate degrees.",
+      "eligibleCourses": [
+        "B.Tech / B.E.",
+        "MBBS",
+        "Integrated LLB",
+        "B.Arch",
+        "Design"
+      ],
+      "qualificationLevels": [
+        "Undergraduate"
+      ],
+      "eligibleStates": [
+        "All"
+      ],
+      "minMarksPercentage": 75,
+      "maxAnnualIncome": 600000,
+      "applicableCategories": [
+        "All"
+      ],
+      "eligibleGenders": [
+        "Female"
+      ],
+      "requiresDisability": false,
+      "minDisabilityPercentage": 0,
+      "benefits": "Up to ₹1,50,000 per academic year towards academic fees, hostel fees, books and learning materials until degree completion.",
+      "amount": 150000,
+      "requiredDocuments": [
+        "Class 12th Marksheet (≥ 75%)",
+        "College Admission Letter / Entrance Exam Rank Card",
+        "Income Certificate / ITR / Salary Slips (< ₹6 Lakh/year)",
+        "Aadhaar Card of student and parent",
+        "Passport size photograph"
+      ],
+      "openingDate": "2026-06-01T00:00:00.000Z",
+      "applicationDeadline": "2026-10-31T00:00:00.000Z",
+      "officialNotificationUrl": "https://kotakeducation.org/kotak-kanya-scholarship/",
+      "officialApplicationUrl": "https://www.buddy4study.com/page/kotak-kanya-scholarship",
+      "status": "active",
+      "lastVerifiedDate": "2026-10-16T14:33:46.285Z",
+      "verifiedByAdmin": true,
+      "createdAt": "2026-10-16T14:33:52.859Z",
+      "updatedAt": "2026-10-16T14:33:52.859Z"
+    },
+    {
+      "_id": "6ad235d05ec42cc25899a607",
+      "name": "Rajarshi Chhatrapati Shahu Maharaj Shikshan Shulkh Shishyavrutti Yojna (EBC)",
+      "provider": "Directorate of Higher Education, Government of Maharashtra",
+      "scholarshipType": "Government (State)",
+      "description": "Financial assistance scheme by Government of Maharashtra offering 50% tuition and examination fee concession for economically weaker section students admitted through CAP rounds.",
+      "eligibleCourses": [
+        "All",
+        "B.Tech / B.E.",
+        "B.Sc",
+        "B.Com",
+        "MBBS",
+        "Diploma"
+      ],
+      "qualificationLevels": [
+        "Diploma",
+        "Undergraduate",
+        "Postgraduate"
+      ],
+      "eligibleStates": [
+        "Maharashtra"
+      ],
+      "minMarksPercentage": 50,
+      "maxAnnualIncome": 800000,
+      "applicableCategories": [
+        "General",
+        "EWS"
+      ],
+      "eligibleGenders": [
+        "All"
+      ],
+      "requiresDisability": false,
+      "minDisabilityPercentage": 0,
+      "benefits": "50% reimbursement of tuition fees and examination fees in government-approved private un-aided and aided colleges.",
+      "amount": 25000,
+      "requiredDocuments": [
+        "Maharashtra Domicile Certificate",
+        "Tahshildar-issued Income Certificate (< ₹8 Lakh)",
+        "CAP Allotment Letter",
+        "Previous Year Marksheet",
+        "Ration Card / Family Declaration"
+      ],
+      "openingDate": "2026-08-10T00:00:00.000Z",
+      "applicationDeadline": "2027-01-31T00:00:00.000Z",
+      "officialNotificationUrl": "https://mahadbt.maharashtra.gov.in",
+      "officialApplicationUrl": "https://mahadbt.maharashtra.gov.in",
+      "status": "active",
+      "lastVerifiedDate": "2026-10-16T14:33:46.285Z",
+      "verifiedByAdmin": true,
+      "createdAt": "2026-10-16T14:33:52.863Z",
+      "updatedAt": "2026-10-16T14:33:52.863Z"
+    }
+  ],
+  "savedScholarships": [
+    {
+      "_id": "6ad237ce5ec42cc25899a609",
+      "userId": "6ad235d05ec42cc25899a600",
+      "scholarshipId": "6ad235d05ec42cc25899a606",
+      "createdAt": "2026-10-16T14:42:22.622Z"
+    }
+  ],
+  "applicationTracks": [
+    {
+      "_id": "6ad237ce5ec42cc25899a60a",
+      "userId": "6ad235d05ec42cc25899a600",
+      "scholarshipId": "6ad235d05ec42cc25899a606",
+      "status": "Applied",
+      "notes": "Submitted online via NSP",
+      "appliedDate": "2026-10-16T14:42:22.654Z",
+      "updatedAt": "2026-10-16T14:42:22.654Z"
+    }
+  ]
+}

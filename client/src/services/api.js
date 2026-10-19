@@ -3,7 +3,7 @@
  * Wraps fetch with standard headers, authentication tokens, and JSON handling.
  */
 
-const BASE_URL = '/api';
+const BASE_URL = 'https://scholarfind-backend.onrender.com/api';
 
 export async function apiRequest(endpoint, options = {}) {
   const token = localStorage.getItem('scholarfind_token');

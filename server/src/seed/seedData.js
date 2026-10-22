@@ -282,7 +282,7 @@ async function seedDatabase() {
       `Database already has ${existingCount} scholarship records.`
     );
     console.log('Existing records were not modified.');
-
+  }
   console.log('Database seeding process completed successfully.\n');
 }
 

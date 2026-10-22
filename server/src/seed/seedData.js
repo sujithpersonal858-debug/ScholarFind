@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const repository = require('../config/repository');
 const { connectDB } = require('../config/db');
-
+const { SCHOLARSHIPS_CATALOGUE } = require('./scholarshipsData');
 const SEED_SCHOLARSHIPS = [
   {
     name: 'Central Sector Scheme of Scholarship for College and University Students (CSSS)',
@@ -250,14 +250,38 @@ async function seedDatabase() {
 
   // 3. Seed Scholarships
   const existingCount = await repository.scholarships.count();
+
   if (existingCount === 0) {
-    for (const s of SEED_SCHOLARSHIPS) {
-      await repository.scholarships.create(s);
+    const allScholarships = [
+      ...SEED_SCHOLARSHIPS,
+      ...SCHOLARSHIPS_CATALOGUE
+    ];
+
+    const uniqueScholarships = [
+      ...new Map(
+        allScholarships.map(s => [
+          `${(s.name || '').trim().toLowerCase()}|${(s.provider || '').trim().toLowerCase()}`,
+          s
+        ])
+      ).values()
+    ];
+
+    let insertedCount = 0;
+
+    for (const scholarship of uniqueScholarships) {
+      await repository.scholarships.create({
+        ...scholarship,
+        verifiedByAdmin: false
+      });
+      insertedCount++;
     }
-    console.log(`Seeded ${SEED_SCHOLARSHIPS.length} verified scholarship records.`);
+
+    console.log(`Seeded ${insertedCount} scholarship records.`);
   } else {
-    console.log(`Database already has ${existingCount} scholarship records.`);
-  }
+    console.log(
+      `Database already has ${existingCount} scholarship records.`
+    );
+    console.log('Existing records were not modified.');
 
   console.log('Database seeding process completed successfully.\n');
 }

@@ -1,0 +1,72 @@
+{
+  "features": [
+    {
+      "name": "marks_margin",
+      "type": "float",
+      "description": "Student marks percentage minus scholarship minimum required marks (can be negative if below requirement)"
+    },
+    {
+      "name": "income_headroom_ratio",
+      "type": "float",
+      "description": "Normalized headroom below scholarship income ceiling: (ceiling - income) / ceiling; 1.0 if scheme has no income limit"
+    },
+    {
+      "name": "course_match",
+      "type": "binary",
+      "description": "1 if student course is eligible or scholarship is open to all courses, 0 otherwise"
+    },
+    {
+      "name": "qualification_match",
+      "type": "binary",
+      "description": "1 if student education level matches scheme qualification levels, 0 otherwise"
+    },
+    {
+      "name": "state_match",
+      "type": "binary",
+      "description": "1 if student domicile state matches eligible states or scheme is All-India, 0 otherwise"
+    },
+    {
+      "name": "category_match",
+      "type": "binary",
+      "description": "1 if student caste/social category matches scheme or scheme is All/General, 0 otherwise"
+    },
+    {
+      "name": "gender_match",
+      "type": "binary",
+      "description": "1 if student gender matches scheme or scheme is open to all genders, 0 otherwise"
+    },
+    {
+      "name": "disability_match",
+      "type": "binary",
+      "description": "1 if scheme does not require disability OR student meets benchmark disability percentage, 0 otherwise"
+    },
+    {
+      "name": "is_first_generation",
+      "type": "binary",
+      "description": "1 if student is a first-generation college learner, 0 otherwise"
+    },
+    {
+      "name": "hard_criteria_passed",
+      "type": "binary",
+      "description": "1 if all mandatory rule-based constraints (course, state, category, min marks, max income) are satisfied, 0 if any failed"
+    }
+  ],
+  "target": {
+    "name": "target_match",
+    "type": "binary",
+    "classes": [0, 1],
+    "class_labels": {
+      "0": "Low Fit / Ineligible",
+      "1": "High Fit Match"
+    },
+    "description": "1 indicates a verified eligible candidate with strong competitive and socio-economic priority; 0 indicates either failing hard eligibility or lower competitive alignment."
+  },
+  "dataset_metadata": {
+    "type": "Simulated Demonstration Benchmark",
+    "records": 2500,
+    "unique_students": 250,
+    "unique_scholarships": 25,
+    "split_strategy": "GroupShuffleSplit (grouped by student_id to prevent data leakage)",
+    "disclaimer": "This dataset contains simulated student-scholarship interactions for academic and algorithmic validation. It does not contain private or real-world applicant records."
+  }
+}

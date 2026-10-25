@@ -57,7 +57,19 @@ export default function ScholarshipCard({ scholarship, onSaveToggle }) {
           </Link>
         </h3>
         <p className="scholarship-provider">{scholarship.provider}</p>
-
+{typeof scholarship.mlMatchScore === 'number' && (
+  <p style={{
+    margin: '8px 0',
+    padding: '8px 12px',
+    background: '#eef6ff',
+    borderRadius: '8px',
+    color: '#1d4ed8',
+    fontWeight: '600',
+    fontSize: '0.9rem'
+  }}>
+    ML Match Score: {scholarship.mlMatchScore}/100
+  </p>
+)}
         {/* Evaluation Match Badge if available */}
         {evalData && (
           <div style={{ marginBottom: '14px' }}>

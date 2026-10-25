@@ -1,7 +1,7 @@
 const repository = require('../config/repository');
 const { evaluateEligibility } = require('../services/eligibilityService');
 const { calculateCompletion } = require('./profileController');
-
+const { predictMatchScore } = require('../services/mlMatchService');
 /**
  * Get all scholarships with optional query filters and keyword search
  */
@@ -165,9 +165,31 @@ const getRecommendations = async (req, res) => {
       const isSaved = savedIds.has(s._id.toString());
       const evaluation = evaluateEligibility(s, profile);
       const item = {
+        const mlFeatures = {
+  marks_margin: Number(profile?.marksPercentage || 0) - Number(s.minMarksPercentage || 0),
+  income_headroom_ratio: Number(s.maxAnnualIncome) > 0
+    ? (Number(s.maxAnnualIncome) - Number(profile?.annualIncome || 0)) / Number(s.maxAnnualIncome)
+    : 1,
+  course_match: !s.eligibleCourses?.length || s.eligibleCourses.includes('All') ||
+    s.eligibleCourses.some(c => c.toLowerCase() === String(profile?.course || '').toLowerCase() ||
+      String(profile?.course || '').toLowerCase().includes(c.toLowerCase())) ? 1 : 0,
+  qualification_match: !s.qualificationLevels?.length || s.qualificationLevels.includes('All') ||
+    s.qualificationLevels.includes(profile?.qualificationLevel) ? 1 : 0,
+  state_match: !s.eligibleStates?.length || s.eligibleStates.includes('All') ||
+    s.eligibleStates.some(st => st.toLowerCase() === String(profile?.state || '').toLowerCase()) ? 1 : 0,
+  category_match: !s.applicableCategories?.length || s.applicableCategories.includes('All') ||
+    s.applicableCategories.includes(profile?.category) ? 1 : 0,
+  gender_match: !s.eligibleGenders?.length || s.eligibleGenders.includes('All') ||
+    s.eligibleGenders.includes(profile?.gender) ? 1 : 0,
+  disability_match: !s.requiresDisability ||
+    (profile?.hasDisability && Number(profile?.disabilityPercentage || 0) >= Number(s.minDisabilityPercentage || 40)) ? 1 : 0,
+  is_first_generation: profile?.isFirstGenerationLearner ? 1 : 0,
+  hard_criteria_passed: evaluation.overallStatus === 'POTENTIAL_MATCH' ? 1 : 0
+};
         ...s,
         isSaved,
-        evaluation
+        evaluation,
+        mlMatchScore: predictMatchScore(mlFeatures)
       };
 
       if (evaluation.overallStatus === 'POTENTIAL_MATCH') {
